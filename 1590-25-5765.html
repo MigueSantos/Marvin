@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>1590-25-5765</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "nav main";
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: 70px 1fr;
+      height: 100vh;
+      background: #99CCFF;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #FF3333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: #ecf0f1;
+      padding: 1rem;
+      border-right: 1px solid #bdc3c7;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav li {
+      margin: 15px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #3498db;
+    }
+
+    main {
+      grid-area: main;
+      padding: 2rem;
+      overflow-y: auto;
+      background: white;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    table, th, td {
+      border: 1px solid #bdc3c7;
+      padding: 10px;
+      text-align: center;
+      background-color: #fafafa;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+
+    .galeria img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #ccc;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      margin-top: 1rem;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    #juego input {
+      padding: 5px;
+      margin: 5px 0;
+      width: 200px;
+    }
+
+    #juego button {
+      padding: 5px 10px;
+      margin-left: 5px;
+      background-color: #3498db;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    #juego button:hover {
+      background-color: #2980b9;
+    }
+
+    #resultado {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mi Sitio Web</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" onclick="mostrar('hoja')">Hoja de Vida</a></li>
+      <li><a href="#" onclick="mostrar('tabla')">Calificaciones</a></li>
+      <li><a href="#" onclick="mostrar('galeria')">Galería</a></li>
+      <li><a href="#" onclick="mostrar('video')">Video</a></li>
+      <li><a href="#" onclick="mostrar('juego')">Juego</a></li>
+      <li><a href="#" onclick="mostrar('manual')">Manual</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="hoja" class="active">
+      <h2>Hoja de Vida</h2>
+      <p><strong>Nombre:</strong> Marvin Santos</p>
+      <p><strong>Edad:</strong> 19 años</p>
+      <p><strong>Carrera:</strong> Ingeniería en Sistemas</p>
+      <p><strong>Email:</strong> msantosp10@miumg.edu.gt</p>
+    </section>
+
+    <section id="tabla">
+      <h2>Tabla de Calificaciones</h2>
+      <table>
+        <tr><th>Materia</th><th>1er Parcial</th><th>2do Parcial</th></tr>
+        <tr><td>Desarrollo Humano</td><td>15</td><td>11</td></tr>
+        <tr><td>Metodología</td><td>10</td><td>9</td></tr>
+        <tr><td>Introducción</td><td>12</td><td>10</td></tr>
+        <tr><td>Contabilidad</td><td>12</td><td>12</td></tr>
+        <tr><td>Lógica de Sistemas</td><td>7</td><td>15</td></tr>
+      </table>
+    </section>
+
+    <section id="galeria">
+      <h2>Galería de Imágenes</h2>
+      <div class="galeria">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTukUgXXsCCcQRuDm6scfO6jswCyjvPw99AQ&s" alt="img">
+        <img src="https://media.sketchfab.com/models/091fffbf2972484f9c35c8a2ec8916f3/thumbnails/4f5413c3e6bf4ceb9a6d8efb9442a3cb/695b88d803894cbe9aa6d7cfcbe1c4bd.jpeg" alt="img">
+        <img src="https://www.vdm.ford.com/content/dam/na/ford/en_us/images/f-150/2025/jellybeans/F150_compare_Raptor.png" alt="img">
+        <img src="https://www.zooplus.es/magazine/wp-content/uploads/2024/02/Capibara.jpeg" alt="img">
+        <img src="https://gustavomolina.com/images/nuevos/honda/civic-type-r/type-r/1-honda-civic-typer-exterior.jpg" alt="img">
+        <img src="https://cdn.kidscreen.com/wp/wp-content/uploads/2013/09/PRM_v02r01-3.jpg" alt="img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Godzilla_%281954%29.jpg/1200px-Godzilla_%281954%29.jpg" alt="img">
+        <img src="https://seakoff.com/cdn/shop/articles/Hinata_Hyuga.jpg?v=1719014103&width=600" alt="img">
+        <img src="https://images.cults3d.com/r8_vezMcv39EyQXxMlrLFoOdxq8=/516x516/filters:no_upscale()/https://fbi.cults3d.com/uploaders/26831146/illustration-file/397fda4d-11ac-488a-bdb3-07ef87faef39/images.jpg" alt="img">
+        <img src="https://suzukimotosmich.com/assets/images/content/products/gsx-r1000r/gsx-r1000r.png" alt="img">
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Video de YouTube</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="juego">
+      <h2>Juego: Adivina el número</h2>
+      <input type="number" id="numero" min="1" max="10" placeholder="Número entre 1 y 10"/>
+      <button onclick="verificar()">Verificar</button>
+      <p id="resultado"></p>
+    </section>
+
+    <section id="manual">
+      <h2>Manual Técnico</h2>
+      <ol>
+        <li>Se creó la estructura con HTML5, CSS y JavaScript en un solo archivo.</li>
+        <li>La navegación muestra secciones sin recargar la página.</li>
+        <li>Se integró una tabla de calificaciones y una galería de imágenes.</li>
+        <li>Se agregó un video con link hacia YouTube.</li>
+        <li>Se programó un pequeño juego interactivo.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script>
+    function mostrar(id) {
+      document.querySelectorAll("main section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    const secreto = Math.floor(Math.random() * 10) + 1;
+
+    function verificar() {
+      const numero = parseInt(document.getElementById("numero").value);
+      const resultado = document.getElementById("resultado");
+
+      if (numero === secreto) {
+        resultado.textContent = "¡Correcto Bebe!";
+        resultado.style.color = "green";
+      } else {
+        resultado.textContent = "Incorrecto. Intenta de nuevo bro.";
+        resultado.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
